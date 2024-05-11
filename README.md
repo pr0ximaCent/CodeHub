@@ -23,19 +23,22 @@ Again, to convert string s="345" to number 345, we can use int x= stoi ( S );
           for ( int i = 1; i <= n ; i++ ) 
           {
                string s; 
-	getline ( cin,s);                        
+	        getline ( cin,s);                        
           }
 
-or,          for (int i=0; i<n; i++)
+or,     ```   
+        for (int i=0; i<n; i++)
 	{
 	      string s;
 	      char c;
 	      cin>>c;
 	      getline ( cin, s);
 	      s = c+s;
-	}	
+	}```
+ 
 
 7. Unique characters in a string- 
+   ```
     sort(s.begin(), s.end());
     int sz= unique( s.begin(),s.end()) - s.begin();
     for(int i = 0; i < sz ; i++)
@@ -43,47 +46,47 @@ or,          for (int i=0; i<n; i++)
         cout<< s[i];
     }
 
-8. Max and Min element in avector : *max_element( v.begin(), v.end()) 
-			           *min_element( v.begin(), v.end())
+8. Max and Min element in avector :``` *max_element( v.begin(), v.end()) 
+			           *min_element( v.begin(), v.end())```
 
 
-9. remove a character from string - s.erase( s.begin( ) ); // to remove third character : s.erase( s.begin( ) + 2);
+9. remove a character from string - ```s.erase( s.begin( ) ); // to remove third character : s.erase( s.begin( ) + 2);```
 
 10. substring - continuous part. for a string "abcdef", here cde is substring. But if there's no continuity then it's subsequence. Like- "ce"
 
-11. convert all character os string to lowercase: 
+11. convert all character os string to lowercase: ```
      for (auto &i : s1)
      {
         i = tolower(i);
-     }
+     }```
 
-12. To find if the substring "ria" exists in the string s="Shahriar" ; we can use-
+12. To find if the substring "ria" exists in the string s="Shahriar" ; we can use-```
        if ( s. find ( "ria" ) ) != -1 )
        cout<<"Found"
        else
-       cout<<"Not found";
+       cout<<"Not found";```
 
 it returns -1 if not found.
 
 13. we can return a program in the midways. Like break, without loop. 
        Example: if ( c==0 ) return cout<<"NO\n",  0;
 
-14. printing the smallest next lexiographical string of a given string. ( STL class 4; 1:30)
+14. printing the smallest next lexiographical string of a given string. ( STL class 4; 1:30 ```
       string s= "1234";
       next_permutation( s. begin (  ) , s. end ( ) );   //this function retuns 1 if there is a string like this
-      cout<<s;     //1243 (second next lexiographical string of 1234)
+      cout<<s;     //1243 (second next lexiographical string of 1234)```
 
-15. printing all the permutation of a string:
+15. printing all the permutation of a string:```
 	do
 	{
 	   cout<< s <<endl;
-	}while( next_permutaion( s.begin ( ), s.end ( ) )  );	
+	}while( next_permutaion( s.begin ( ), s.end ( ) )  );	```
 
-16. printing all the permutation of an array / vector:
+16. printing all the permutation of an array / vector:```
 	do
 	{
 	    for(auto i : v) cout<< i <<endl;
-               }while( next_permutation ( v.begin(), v,.end() ) );
+               }while( next_permutation ( v.begin(), v,.end() ) );```
               
 for array, use this line: while( next_permutation ( a, a+n ) );   // n is the size of array
 
